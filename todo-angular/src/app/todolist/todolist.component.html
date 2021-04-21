@@ -1,0 +1,12 @@
+<h2>My Todo Lists</h2>
+<ul class="list">
+  <li *ngFor="let todo of todos">
+    <a routerLink="/todo/{{todo.id}}">
+      <span class="badge">{{todo.id}}</span> {{todo.title}}
+    </a>
+    <input type="text" id="fname" #des  placeholder="enter description">
+    <button (click)="goToEdit(todo.id)">Edit</button>
+    <button (click)="goToDelete(todo.id)">Delete</button>
+    
+  </li>
+</ul>   
